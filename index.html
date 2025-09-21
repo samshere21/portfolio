@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samir Karki</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Signature font */
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap');
+    .logo-font {
+      font-family: 'Fira Code', monospace;
+    }
+
+    section {
+      scroll-margin-top: 120px; /* Prevents header overlap */
+    }
+
+    h1.text-center {
+      display: flex;
+      justify-content: center; /* Centers the text horizontally */
+      align-items: center; /* Aligns the text vertically */
+      gap: 10px; /* Adds spacing between "I am" and "Samir Karki" */
+    }
+  </style>
+</head>
+<body class="bg-[radial-gradient(circle_at_center,_#7f2982,_black)] text-white min-h-screen relative">
+ 
+  <!-- Navbar -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-4 bg-black/30 backdrop-blur-md shadow-lg transition-all duration-300">
+
+  <!-- Signature Logo -->
+  <div class="relative cursor-pointer text-3xl font-bold logo-font" onclick="location.reload()">
+    <span class="text-white">Sa</span><span class="text-[#7f2982]">mir</span>
+  </div>
+
+  <!-- Menu -->
+  <nav class="flex-1 flex justify-center relative">
+    <div class="flex gap-16 px-6 py-2 bg-black/50 backdrop-blur-md rounded-full shadow-lg">
+      <a href="#home" class="nav-link px-6 py-2 rounded-full bg-[#7f2982] text-white">Home</a>
+      <a href="#about" class="nav-link px-6 py-2 rounded-full text-white hover:bg-[#7f2982]">About</a>
+      <a href="#skills" class="nav-link px-6 py-2 rounded-full text-white hover:bg-[#7f2982]">Skills</a>
+      <a href="#projects" class="nav-link px-6 py-2 rounded-full text-white hover:bg-[#7f2982]">Projects</a>
+    </div>
+  </nav>
+
+  <!-- Contact Me (separate) -->
+  <div>
+    <a href="#contact" class="px-6 py-2 rounded-full bg-[#7f2982] text-white hover:bg-white hover:text-[#7f2982] transition">Contact Me</a>
+  </div>
+</header>
+
+<script>
+  // highlight active menu link on click
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("bg-[#7f2982]", "text-white"));
+      link.classList.add("bg-[#7f2982]", "text-white");
+    });
+  });
+</script>
+
+  <!-- Home Section -->
+<section id="home" class="roundedd-xl min-h-screen flex flex-col justify-center px-10 md:flex-row md:items-center md:justify-between relative bg-[radial-gradient(circle_at_center,_#7f2982,_black)]">
+  
+  <!-- Left Side: Text -->
+<div class="flex flex-col md:ml-40 md:items-start">
+  
+  <!-- Name + Description Centered -->
+  <div class="text-center md:text-left md:ml-48 mt-20" style="font-family: 'Copperplate Gothic Light', sans-serif;">
+    <h1 class="flex items-baseline gap-5 justify-center md:justify-start">
+      <span class="text-[yellow] text-5xl md:text-4xl font-bold">I am</span>
+      <span class="text-white text-6xl md:text-7xl font-extrabold">Samir Karki</span>
+    </h1>
+ 
+    <div class="w-40 h-[1px] bg-white mx-auto my-2"></div>
+
+    <p class="text-white text-2xl leading-relaxed whitespace-pre-line text-center mt-8">
+I am a passionate web developer crafting creative and user-friendly digital experiences.
+I love blending clean design with efficient code to bring ideas to life.
+</p>
+  </div>
+</div>
+
+  <!-- Right Side: Image -->
+  <div class="mt-10 md:mt-0 md:ml-10 flex justify-center">
+    <img 
+      src="https://png.pngtree.com/png-vector/20231103/ourmid/pngtree-happy-corporate-business-professional-one-man-clipart-white-background-png-image_10329231.png"
+      alt="Samir"
+      class="w-72 md:w-[380px] lg:w-[420px] object-cover drop-shadow-2xl"
+    >
+  </div>
+
+  <!-- Scroll Down Indicator -->
+<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center">
+  <p class="text-sm text-gray-300 mb-2">Scroll down to know more about me.</p>
+  <div class="w-9 h-9 rounded-full flex items-center justify-center mx-auto animate-bounce">
+    <span class="text-[#7f2982] text-xl">↓</span>
+  </div>
+</div>
+
+</section>
+<div class=" ">
+  <p class="text-white italic text-sm text-center px-4 leading-loose pb-1">
+  </p>
+</div>
+
+<!-- About Section -->
+<section id="about" 
+  class="relative rounded-xl min-h-screen flex items-center justify-center 
+  bg-[radial-gradient(circle_at_center,_#011627,_#1D2F6F)] transition-colors duration-700 ease-in-out overflow-hidden">
+
+  <!-- Stars Background -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <!-- Vertical ABOUT text -->
+  <div class="absolute top-100 left-6 transform -rotate-90 origin-top-left z-10">
+    <h4 class="text-white text-6xl font-bold tracking-wide" style="font-family: 'Berlin Sans FB', sans-serif;">
+      ABOUT ME
+    </h4>
+  </div>
+
+  <!-- Glass Card -->
+  <div class="relative bg-black/40 backdrop-blur-md rounded-3xl shadow-2xl p-10 max-w-4xl text-center z-10">
+    
+    <!-- Title -->
+    <h2 class="text-4xl font-bold mb-6 text-[#f5f5f5]">Who Am I?</h2>
+    
+    <!-- About Paragraph -->
+    <p class="text-lg leading-relaxed text-gray-200 mb-6">
+      I’m a web developer passionate about creating visually appealing and user-friendly 
+      digital experiences. My focus is on blending clean design with efficient code, 
+      turning ideas into meaningful projects.
+    </p>
+
+    <!-- Highlights -->
+    <div class="grid md:grid-cols-2 gap-6 mt-6">
+      <div class="highlight-card bg-white/10 p-6 rounded-xl shadow-md hover:bg-white/20 transition transform hover:scale-105 hover:shadow-[0_0_25px_rgba(127,41,130,0.6)]">
+        <h3 class="text-xl font-semibold mb-2 text-white">💡 Creativity</h3>
+        <p class="text-gray-300 text-sm">
+          I love transforming ideas into engaging, interactive websites.
+        </p>
+      </div>
+      <div class="highlight-card bg-white/10 p-6 rounded-xl shadow-md hover:bg-white/20 transition transform hover:scale-105 hover:shadow-[0_0_25px_rgba(127,41,130,0.6)]">
+        <h3 class="text-xl font-semibold mb-2 text-white">⚡ Efficiency</h3>
+        <p class="text-gray-300 text-sm">
+          Writing clean, optimized code is always my top priority.
+        </p>
+      </div>
+    </div>
+
+    <!-- My Journey -->
+    <div class="mt-12 text-left space-y-4">
+      <h3 class="text-2xl font-semibold text-white mb-2">My Journey:</h3>
+      <ul class="space-y-3 text-gray-300">
+        <li>🎓 Started Honors CS degree at YSU (2024).</li>
+        <li>💻 Built my first portfolio project (2021).</li>
+        <li>🚀 Exploring AI & Trading while pursuing web development.</li>
+      </ul>
+    </div>
+
+    <!-- Personal Quote -->
+    <p class="italic text-gray-400 mt-10">
+      "Code is not just about solving problems — it’s about creating possibilities."
+    </p>
+  </div>
+</section>
+
+<!-- Star Styles -->
+<style>
+  .stars, .stars2, .stars3 {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: transparent;
+    z-index: 0;
+  }
+
+  .stars {
+    background: radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 40px 70px, white, transparent),
+                radial-gradient(2px 2px at 50px 160px, white, transparent),
+                radial-gradient(2px 2px at 90px 40px, white, transparent),
+                radial-gradient(2px 2px at 130px 80px, white, transparent);
+    background-size: 200px 200px;
+    animation: moveStars 60s linear infinite;
+  }
+
+  .stars2 {
+    background: radial-gradient(1.5px 1.5px at 30px 50px, white, transparent),
+                radial-gradient(1.5px 1.5px at 70px 90px, white, transparent),
+                radial-gradient(1.5px 1.5px at 110px 170px, white, transparent),
+                radial-gradient(1.5px 1.5px at 170px 40px, white, transparent),
+                radial-gradient(1.5px 1.5px at 190px 150px, white, transparent);
+    background-size: 200px 200px;
+    animation: moveStars 120s linear infinite;
+  }
+
+  .stars3 {
+    background: radial-gradient(1px 1px at 25px 60px, white, transparent),
+                radial-gradient(1px 1px at 100px 120px, white, transparent),
+                radial-gradient(1px 1px at 160px 10px, white, transparent),
+                radial-gradient(1px 1px at 200px 80px, white, transparent);
+    background-size: 200px 200px;
+    animation: moveStars 180s linear infinite;
+  }
+
+  @keyframes moveStars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-1000px); }
+  }
+</style>
+
+<!-- Skills Section -->
+<section id="skills" class="min-h-screen flex flex-col items-center justify-center bg-[radial-gradient(circle_at_center,_#0d0d0d,_#1a1a1a)] px-6 py-20">
+  <!-- Header -->
+  <div class="text-center max-w-4xl mx-auto mb-16">
+    <h2 class="text-5xl font-bold mb-6" style="font-family: 'Amasis MT Pro Black', serif;">Skills</h2>
+    <p class="text-lg text-gray-300">Technologies and tools I work with:</p>
+  </div>
+
+  <!-- Skills Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+    <!-- Skill Card -->
+    <div class="skill-box group">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-20 h-20">
+      <p class="mt-6 font-semibold text-xl" style="font-family: 'Amasis MT Pro Black', serif;">HTML</p>
+    </div>
+    <div class="skill-box group">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-20 h-20">
+      <p class="mt-6 font-semibold text-xl" style="font-family: 'Amasis MT Pro Black', serif;">CSS</p>
+    </div>
+    <div class="skill-box group">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-20 h-20">
+      <p class="mt-6 font-semibold text-xl" style="font-family: 'Amasis MT Pro Black', serif;">JavaScript</p>
+    </div>
+    <div class="skill-box group">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-20 h-20">
+      <p class="mt-6 font-semibold text-xl" style="font-family: 'Amasis MT Pro Black', serif;">React</p>
+    </div>
+    <div class="skill-box group">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-20 h-20">
+      <p class="mt-6 font-semibold text-xl" style="font-family: 'Amasis MT Pro Black', serif;">Node.js</p>
+    </div>
+    <div class="skill-box group">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-20 h-20">
+      <p class="mt-6 font-semibold text-xl" style="font-family: 'Amasis MT Pro Black', serif;">Python</p>
+    </div>
+    <div class="skill-box group">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-20 h-20">
+      <p class="mt-6 font-semibold text-xl" style="font-family: 'Amasis MT Pro Black', serif;">Git</p>
+    </div>
+    <div class="skill-box group">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-20 h-20">
+      <p class="mt-6 font-semibold text-xl" style="font-family: 'Amasis MT Pro Black', serif;">GitHub</p>
+    </div>
+  </div>
+</section>
+
+<!-- Styles for glowing skill boxes -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@900&display=swap'); 
+  /* If Amasis MT Pro Black is not available online, use a strong fallback like Crimson Pro Black */
+
+  .skill-box {
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 2rem; /* More circular edges like About Me */
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 0 25px rgba(127, 41, 130, 0.8), 0 0 50px rgba(127, 41, 130, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skill-box:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 60px rgba(177, 67, 182, 1), 0 0 30px rgba(127, 41, 130, 0.9) inset;
+  }
+
+  .skill-box img {
+    filter: drop-shadow(0 0 12px rgba(177, 67, 182, 0.9));
+  }
+</style>
+
+  <!-- Projects Section -->
+<section id="projects" class="relative min-h-screen flex flex-col items-center justify-start py-20 px-6 bg-purple-900">
+  <!-- Title -->
+  <div class="text-center max-w-4xl mb-12" data-aos="fade-up">
+    <h2 class="text-5xl font-bold mb-4" style="font-family: 'Amasis MT Pro Black', serif;">Projects</h2>
+    <p class="text-lg italic text-gray-200">"Here are some of the projects I’ve worked on:"</p>
+  </div>
+
+  <!-- Project Grid -->
+  <div class="grid gap-8 md:grid-cols-2 max-w-6xl w-full" data-aos="fade-up" data-aos-delay="200">
+    <!-- Project 1 -->
+    <div class="project-box">
+      <h3 class="text-2xl font-semibold mb-2">Portfolio Website</h3>
+      <p class="text-gray-300">A responsive personal website built with HTML, TailwindCSS, and JavaScript.</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-box">
+      <h3 class="text-2xl font-semibold mb-2">Weather App</h3>
+      <p class="text-gray-300">A simple weather app using an external API to display current conditions.</p>
+    </div>
+
+    <!-- Future Project Placeholder -->
+    <div class="project-box opacity-50">
+      <h3 class="text-2xl font-semibold mb-2">Future Project</h3>
+      <p class="text-gray-400">Coming soon...</p>
+    </div>
+
+    <!-- Future Project Placeholder -->
+    <div class="project-box opacity-50">
+      <h3 class="text-2xl font-semibold mb-2">Future Project</h3>
+      <p class="text-gray-400">Coming soon...</p>
+    </div>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div class="absolute bottom-6 right-6 flex space-x-6">
+    <a href="https://github.com/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-8 h-8 hover:scale-110 transition-transform" alt="GitHub">
+    </a>
+    <a href="https://linkedin.com/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="w-8 h-8 hover:scale-110 transition-transform" alt="LinkedIn">
+    </a>
+    <a href="https://tiktok.com/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" class="w-8 h-8 hover:scale-110 transition-transform" alt="TikTok">
+    </a>
+    <a href="https://instagram.com/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="w-8 h-8 hover:scale-110 transition-transform" alt="Instagram">
+    </a>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+  .project-box {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 20px rgba(127, 41, 130, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(177, 67, 182, 0.9), 0 0 15px rgba(127, 41, 130, 0.6) inset;
+  }
+</style>
+
+  <!-- Contact Section -->
+  <section id="contact" class="min-h-screen flex items-center justify-center bg-black/60 backdrop-blur-md">
+<div class="bg-white text-black p-8 rounded-2xl w-96" data-aos="fade-up">
+<h2 class="text-3xl font-bold mb-4 text-center">Contact Me</h2>
+<form id="messageForm">
+<input type="text" name="name" placeholder="Name" class="w-full mb-3 p-2 border rounded-lg">
+<input type="email" name="email" placeholder="Email" class="w-full mb-3 p-2 border rounded-lg">
+<textarea name="message" placeholder="Message" class="w-full mb-3 p-2 border rounded-lg"></textarea>
+<label class="flex items-center mb-3 text-sm text-gray-700">
+<input type="checkbox" id="captcha" class="mr-2"> I am not a robot
+</label>
+<button type="submit" class="bg-[#7f2982] text-white px-4 py-2 rounded-lg hover:bg-black hover:text-white transition w-full">Send</button>
+</form>
+</div>
+</section>
+
+  <!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 1000, once: true });
+
+
+// Navigation highlight on scroll
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+navLinks.forEach(link => link.classList.remove("bg-[#7f2982]"));
+const active = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+if (active) active.classList.add("bg-[#7f2982]", "text-white");
+}
+});
+}, { threshold: 0.5 });
+
+
+sections.forEach(section => observer.observe(section));
+
+
+// Contact form validation
+document.getElementById("messageForm").onsubmit = (e) => {
+const name = document.querySelector("input[name='name']").value.trim();
+const email = document.querySelector("input[name='email']").value.trim();
+const message = document.querySelector("textarea[name='message']").value.trim();
+const captcha = document.getElementById("captcha");
+
+
+if (!name || !email || !message) {
+alert("⚠️ Please fill out all fields before sending.");
+e.preventDefault();
+return;
+}
+if (!captcha.checked) {
+alert("⚠️ Please confirm you are human!");
+e.preventDefault();
+return;
+}
+alert("✅ Your message will be sent via email service.");
+};
+</script>
+</body>
+</html>
